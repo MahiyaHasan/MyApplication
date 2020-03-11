@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Peek in your balcony</string>
+    <string name="app_name">Plant Lovers Assistant</string>
     <string name="edit_bt">EditProfile</string>
     <string name="notify_bt">Notifications</string>
     <string name="logout_bt">Logout</string>
@@ -7,4 +7,7 @@
     <string name="icon1">icon</string>
     <string name="r_tv">Take a look at your balcony</string>
     <string name="intro">Peek in your balcony</string>
+    <string name="back">Back</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
 </resources>
