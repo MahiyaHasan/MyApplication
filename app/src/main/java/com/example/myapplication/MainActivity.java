@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     EditText email_et, password_et;
     Button login_bt,signip_bt;
     FirebaseAuth fAuth;
-    @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);

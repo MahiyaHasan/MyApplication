@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CheckTemperature">
 
     <TextView
@@ -11,25 +12,45 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="155dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="134dp"
         android:layout_marginBottom="644dp"
-        android:text="Temperature"
+        android:text="@string/temp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/temperature_tv"
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="392dp"
+        android:layout_height="520dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <Button
+        android:id="@+id/back_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="534dp"
-        android:text="(sensor value for temperature)"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/ButtonBlueColor"
+        android:text="@string/back"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,50 +58,43 @@
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
-        android:id="@+id/back_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="425dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/ButtonBlueColor"
-        android:text="Back"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temperature_tv" />
-
-    <Button
         android:id="@+id/profile_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="425dp"
+        android:layout_marginTop="580dp"
         android:layout_marginEnd="152dp"
         android:layout_marginBottom="32dp"
         android:background="@color/ButtonBlueColor"
-        android:text="Profile"
+        android:text="@string/profile"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/back_bt"
-        app:layout_constraintTop_toBottomOf="@+id/temperature_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
     <Button
         android:id="@+id/home_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="425dp"
+        android:layout_marginTop="580dp"
         android:layout_marginEnd="29dp"
         android:layout_marginBottom="32dp"
         android:background="@color/ButtonBlueColor"
-        android:text="Home"
+        android:text="@string/home"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/profile_bt"
-        app:layout_constraintTop_toBottomOf="@+id/temperature_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
