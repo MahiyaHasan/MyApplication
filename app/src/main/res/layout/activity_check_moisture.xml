@@ -115,4 +115,32 @@
         app:layout_constraintStart_toEndOf="@+id/profile_bt"
         app:layout_constraintTop_toBottomOf="@+id/waterPlant_et" />
 
+    <Button
+        android:id="@+id/start_bt"
+        android:layout_width="95dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="58dp"
+        android:text="Start Reading"
+        app:layout_constraintBottom_toTopOf="@+id/back_bt"
+        app:layout_constraintEnd_toStartOf="@+id/waterPlant_bt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waterPlant_et" />
+
+    <Button
+        android:id="@+id/stop_bt"
+        android:layout_width="95dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="61dp"
+        android:text="Stop  Reading"
+        app:layout_constraintBottom_toTopOf="@+id/home_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/waterPlant_bt"
+        app:layout_constraintTop_toBottomOf="@+id/waterPlant_et" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
