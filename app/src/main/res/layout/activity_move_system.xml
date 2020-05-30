@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,153 +7,30 @@
     tools:context=".MoveSystem">
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="139dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="612dp"
-        android:text="Set Reminder"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="545dp"
-        android:text="(for moving system in)"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="247dp"
-        android:layout_marginBottom="457dp"
-        android:text="Set Date"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <EditText
-        android:id="@+id/date_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="452dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <TextView
-        android:id="@+id/textview13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:text="Set Time"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintTop_toBottomOf="@+id/textView12"
-        tools:layout_editor_absoluteX="81dp" />
-
-    <EditText
-        android:id="@+id/time_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="375dp"
-        android:ems="10"
-        android:inputType="time"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textview13"
-        app:layout_constraintTop_toBottomOf="@+id/date_et" />
+        android:layout_above="@id/button_timepicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="No Alarm set"
+        android:textSize="30sp" />
 
     <Button
-        android:id="@+id/setAlarm_bt"
+        android:id="@+id/button_timepicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginTop="71dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="256dp"
-        android:background="@color/ButtonBlueColor"
-        android:text="  Set Alarm  "
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/time_et" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="open time picker" />
 
     <Button
-        android:id="@+id/back_bt"
+        android:id="@+id/button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="296dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/ButtonBlueColor"
-        android:text="Back"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview13" />
+        android:layout_below="@id/button_timepicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27dp"
+        android:text="cancel alarm" />
 
-    <Button
-        android:id="@+id/profile_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/ButtonBlueColor"
-        android:text="Profile"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/back_bt"
-        app:layout_constraintTop_toBottomOf="@+id/setAlarm_bt" />
-
-    <Button
-        android:id="@+id/home_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="295dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/ButtonBlueColor"
-        android:text="Home"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profile_bt"
-        app:layout_constraintTop_toBottomOf="@+id/time_et" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

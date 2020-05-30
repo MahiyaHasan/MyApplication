@@ -16,7 +16,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class CheckMoisture extends AppCompatActivity {
     TextView moisture_tv;
-    Button save_bt;
+    Button waterPlant_bt;
     DatabaseReference reff;
 
     @Override
@@ -26,14 +26,14 @@ public class CheckMoisture extends AppCompatActivity {
         getSupportActionBar().hide();
 
         moisture_tv = findViewById(R.id.moisture_et);
-
+        waterPlant_bt = findViewById(R.id.waterPlant_bt);
 
         // save_bt.setOnClickListener(new View.OnClickListener() {
 
         // @Override
         //   public void onClick(View v) {
         //   reff = FirebaseDatabase.getInstance().getReference().child("Another").child("TestData");
-        reff = FirebaseDatabase.getInstance().getReference().child("Student");
+        reff = FirebaseDatabase.getInstance().getReference().child("CurrentMoistureValue");
 
         reff.addValueEventListener(new ValueEventListener() {
             @Override
@@ -61,5 +61,20 @@ public class CheckMoisture extends AppCompatActivity {
         });
         //   }
         // });
+
+
+
+        waterPlant_bt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                reff = FirebaseDatabase.getInstance().getReference();
+
+                reff.child("TurnPumpOn").setValue("1");
+
+
+
+
+            }
+        });
     }
 }
