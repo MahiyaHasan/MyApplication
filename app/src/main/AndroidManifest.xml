@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Plant Lover's Assistant"
+        android:label="Plant Lover&apos;s Assistant"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CheckWeather"/>
+        <activity android:name=".SetTimer"></activity>
+        <activity android:name=".CheckWeather" />
         <activity android:name=".Main1Activity" />
         <activity android:name=".Tips" />
         <activity android:name=".SetThresholds" />
@@ -37,8 +39,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver android:name=".AlertReceiver" />
 
+        <receiver android:name=".AlertReceiver" />
     </application>
 
 </manifest>

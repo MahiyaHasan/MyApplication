@@ -35,75 +35,88 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    <Button
+        android:id="@+id/stopReading_bt"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="14dp"
+        android:text="Stop Sensor Reading"
+        app:layout_constraintBottom_toTopOf="@+id/turnFlaslightsOn_bt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startReading_bt" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="234dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="227dp"
-        android:text="Turn flashlighs on?"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <Button
+        android:id="@+id/startReading_bt"
+        android:layout_width="323dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="207dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="11dp"
+        android:text="Start Sensor Reading"
+        app:layout_constraintBottom_toTopOf="@+id/stopReading_bt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/light_tv" />
 
-    <Switch
+    <Button
         android:id="@+id/turnFlaslightsOn_bt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="237dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="227dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="324dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="23dp"
+        android:text="Turn Flashlights On"
+        app:layout_constraintBottom_toTopOf="@+id/back_bt"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
-        app:layout_constraintTop_toBottomOf="@+id/light_tv" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stopReading_bt" />
 
     <Button
         android:id="@+id/back_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="147dp"
-        android:layout_marginEnd="274dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="275dp"
+        android:layout_marginBottom="21dp"
         android:background="@color/ButtonBlueColor"
         android:text="Back"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/turnFlaslightsOn_bt" />
 
     <Button
         android:id="@+id/profile_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="147dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="161dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/ButtonBlueColor"
         android:text="Profile"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/back_bt"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/turnFlaslightsOn_bt" />
 
     <Button
         android:id="@+id/home_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="147dp"
-        android:layout_marginEnd="29dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/ButtonBlueColor"
         android:text="Home"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -111,6 +124,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/profile_bt"
         app:layout_constraintTop_toBottomOf="@+id/turnFlaslightsOn_bt" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
