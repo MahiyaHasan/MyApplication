@@ -124,7 +124,7 @@ public class CheckMoisture extends AppCompatActivity {
          public void onClick(View v) {
            reff = FirebaseDatabase.getInstance().getReference();
 
-                   reff.child("TurnPumpOn").setValue("0");
+                   reff.child("TurnPumpOn").setValue("1");
 
 
                }
