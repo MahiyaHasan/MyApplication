@@ -11,106 +11,134 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="160dp"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="90dp"
         android:layout_marginEnd="161dp"
         android:layout_marginBottom="596dp"
         android:text="Light Intensity"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/light_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="145dp"
-        android:layout_marginTop="74dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="497dp"
         android:text="(light sensor value)"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+
+
+        app:layout_constraintBottom_toTopOf="@+id/YPwaveView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <com.yangp.ypwaveview.YPWaveView
+        android:id="@+id/YPwaveView"
+        android:layout_width="279dp"
+        android:layout_height="230dp"
+        app:animatorEnable="false"
+        app:behideColor="#4e99e6"
+        app:borderColor="#ff0000"
+        app:borderWidthSize="4dp"
+        app:frontColor="#1f3bed"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_tv"
+        app:layout_constraintVertical_bias="0.423"
+        app:max="100"
+
+        app:shapePadding="10dp"
+        app:shapeType="circle"
+        app:strong="100"
+        app:textColor="#15DF89"
+        app:textHidden="false" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="150dp"
+        android:text="Turn flashlighs on?"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/YPwaveView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/turnFlaslightsOn_bt"
+        android:layout_width="63dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/YPwaveView"
+        app:layout_constraintVertical_bias="0.273" />
 
     <Button
         android:id="@+id/back_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="422dp"
-        android:layout_marginEnd="275dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="274dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/ButtonBlueColor"
         android:text="Back"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/light_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/profile_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="422dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="152dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/ButtonBlueColor"
         android:text="Profile"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/back_bt"
-        app:layout_constraintTop_toBottomOf="@+id/light_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/home_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="662dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="21dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="147dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="32dp"
         android:background="@color/ButtonBlueColor"
         android:text="Home"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/profile_bt"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Switch
-        android:id="@+id/reading_switch"
-        android:layout_width="147dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="348dp"
-        android:layout_marginEnd="216dp"
-        android:layout_marginBottom="40dp"
-        android:text="Start Reading"
-        app:layout_constraintBottom_toTopOf="@+id/back_bt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/light_tv" />
-
-    <Switch
-        android:id="@+id/light_switch"
-        android:layout_width="140dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="348dp"
-        android:layout_marginEnd="34dp"
-        android:layout_marginBottom="41dp"
-        android:text="Light On"
-        app:layout_constraintBottom_toTopOf="@+id/profile_bt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/reading_switch"
-        app:layout_constraintTop_toBottomOf="@+id/light_tv" />
+        app:layout_constraintTop_toBottomOf="@+id/turnFlaslightsOn_bt"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
