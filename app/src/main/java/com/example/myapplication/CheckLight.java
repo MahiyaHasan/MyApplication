@@ -31,8 +31,8 @@ public class CheckLight extends AppCompatActivity {
     YPWaveView ypWaveView;
     private NotificationManagerCompat notificationManager;
     DatabaseReference reff;
-    DatabaseReference Moisture;
-    SwitchCompat aSwitch;
+    DatabaseReference CurrentLightIntensity;
+    SwitchCompat reading_switch, light_switch;
     private NotificationHelper notificationHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,23 +40,25 @@ public class CheckLight extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_light);
         ypWaveView=findViewById(R.id.YPwaveView);
-        aSwitch=findViewById(R.id.turnFlaslightsOn_bt);
+        light_switch=findViewById(R.id.turnFlaslightsOn_bt);
+        reading_switch = findViewById(R.id.reading_switch);
         ypWaveView.setMax(1024);
         //ypWaveView.setProgress(50);
         ypWaveView.startAnimation();
-        Moisture= FirebaseDatabase.getInstance().getReference().child("Moisture");
+        CurrentLightIntensity = FirebaseDatabase.getInstance().getReference().child("Moisture");
+
         notificationManager = NotificationManagerCompat.from(this);
         notificationHelper=new NotificationHelper(this);
         SharedPreferences sharedPreferences=getSharedPreferences("save",MODE_PRIVATE);
-        aSwitch.setChecked(sharedPreferences.getBoolean("value",true));
+        light_switch.setChecked(sharedPreferences.getBoolean("value",true));
         reff = FirebaseDatabase.getInstance().getReference();
 
 
 
-        aSwitch.setOnClickListener(new View.OnClickListener() {
+        light_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(aSwitch.isChecked())
+                if(light_switch.isChecked())
                 {
 
                     reff.child("TurnLightOn").setValue("1");
@@ -65,7 +67,7 @@ public class CheckLight extends AppCompatActivity {
                     SharedPreferences.Editor editor=getSharedPreferences("save",MODE_PRIVATE).edit();
                     editor.putBoolean("value",true);
                     editor.apply();
-                    aSwitch.setChecked(true);
+                    light_switch.setChecked(true);
                     sendOnChannel1("Lighting System","FlashLight is On");
 
 
@@ -75,7 +77,7 @@ public class CheckLight extends AppCompatActivity {
                     SharedPreferences.Editor editor=getSharedPreferences("save",MODE_PRIVATE).edit();
                     editor.putBoolean("value",false);
                     editor.apply();
-                    aSwitch.setChecked(false);
+                    light_switch.setChecked(false);
                     Toast.makeText(CheckLight.this,"FlashLight is Off",Toast.LENGTH_SHORT).show();
                     reff.child("TurnLightOn").setValue("0");
 
@@ -85,23 +87,64 @@ public class CheckLight extends AppCompatActivity {
 
 
         // ypWaveView.setAnimationSpeed();
-        Moisture.addValueEventListener(new ValueEventListener() {
+
+
+        reading_switch.setOnClickListener(new View.OnClickListener() {
+            ///////////////////////////###################
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot ds : dataSnapshot.getChildren())
+            public void onClick(View v) {
+                Boolean switchState = reading_switch.isChecked();
+                if(switchState == true)
                 {
-                    String moistureValue = ds.getValue().toString().trim();
-                    int value=Integer.parseInt(moistureValue);
-                    ypWaveView.setProgress(value);
+                    reff.child("SendLightIntensityValue").setValue("1");
+
+                    CurrentLightIntensity.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                                String moistureValue = ds.getValue().toString().trim();
+                                int value=Integer.parseInt(moistureValue);
+                                ypWaveView.setProgress(value);
+
+
+//  int moistureValueInt = Integer.valueOf(moistureValue);
+//  moisture_tv.setText(moistureValueInt);
+
+
+                                // else
+                                //  {
+                                // notificationManager.cancel(0);
+                                //
+                                //notificationFlag = 0;
+                                //notificationFlag2 = 0;
+                                //}
+
+
+                            }
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+
+                    });
+                }//////////if ends
+
+                else
+                {
+                    reff = FirebaseDatabase.getInstance().getReference();
+
+                    reff.child("SendLightIntensityValue").setValue("0");
                 }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+            }//// on click ends
+            //////////////////////###############
         });
+
+
+
 
 
 

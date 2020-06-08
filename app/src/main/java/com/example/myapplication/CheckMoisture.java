@@ -50,12 +50,12 @@ public class CheckMoisture extends AppCompatActivity {
 
         moisture_tv = findViewById(R.id.moisture_et);
         text_circular=findViewById(R.id.textview_inside_circular);
-        reading_switch = findViewById(R.id.reading_switch);
+        reading_switch = findViewById(R.id.reading_switch_moisture);
         pump_switch = findViewById(R.id.pump_switch);
 
 
         progressBar=findViewById(R.id.circularProgressBar);
-        progressBar.setProgressMax(100);
+        progressBar.setProgressMax(2000);
         // progressBar.setProgress(30);
         notificationManager = NotificationManagerCompat.from(this);
         notificationHelper=new NotificationHelper(this);
@@ -69,31 +69,64 @@ public class CheckMoisture extends AppCompatActivity {
         reff = FirebaseDatabase.getInstance().getReference();
         sendMoistureSensorValueRef = FirebaseDatabase.getInstance().getReference().child("SendMoistureSensorData");
 
-        CurrentMoistureValue.addValueEventListener(new ValueEventListener() {
+        reading_switch.setOnClickListener(new View.OnClickListener() {
+
+            ///////////////////////////###################
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    String moistureValue = ds.getValue().toString().trim();
+            public void onClick(View v) {
+                Boolean switchState = reading_switch.isChecked();
+                if (switchState == true) {
+                    sendMoistureSensorValueRef.setValue("1");
+                    CurrentMoistureValue.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                    text_circular.setText(moistureValue+"%");
-                    float progress_value=Float.parseFloat(moistureValue);
-                    progressBar.setProgress(progress_value);
+                            for (DataSnapshot ds : dataSnapshot.getChildren()) {
+                                String moistureValue = ds.getValue().toString().trim();
+
+                                text_circular.setText(moistureValue+"%");
+                                float progress_value=Float.parseFloat(moistureValue);
+                                progressBar.setProgress(progress_value);
 
 
-                    if (progress_value<=41)
-                    {
-                        sendOnChannel2("Watering Sytem","Soil moisture level is not optimum.");
+                                if (progress_value<=41)
+                                {
+                                    sendOnChannel2("Watering Sytem","Soil moisture level is not optimum.");
 
-                    }
+                                }
+
+
+
+                                // else
+                                //  {
+                                // notificationManager.cancel(0);
+                                //
+                                //notificationFlag = 0;
+                                //notificationFlag2 = 0;
+                                //}
+
+
+                            }
+
+
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                        }
+
+                    });
+                }// end of in checked switch
+                else {
+                    reff = FirebaseDatabase.getInstance().getReference();
+
+                    reff.child("SendMoistureSensorData").setValue("0");
                 }
-
             }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
+            //////////////////////###############
         });
+
 
 
 

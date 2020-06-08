@@ -46,7 +46,7 @@
         app:borderColor="#ff0000"
         app:borderWidthSize="4dp"
         app:frontColor="#1f3bed"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/reading_switch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.469"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,31 +60,35 @@
         app:textColor="#15DF89"
         app:textHidden="false" />
 
-    <TextView
-        android:id="@+id/textView8"
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/reading_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginBottom="150dp"
-        android:text="Turn flashlighs on?"
+        android:text="Start Reading"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.163"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/YPwaveView"
         app:layout_constraintVertical_bias="1.0" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/turnFlaslightsOn_bt"
-        android:layout_width="63dp"
-        android:layout_height="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="150dp"
+        android:text="Light On"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.659"
-        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toEndOf="@+id/reading_switch"
         app:layout_constraintTop_toBottomOf="@+id/YPwaveView"
-        app:layout_constraintVertical_bias="0.273" />
+        app:layout_constraintVertical_bias="0.507" />
 
     <Button
         android:id="@+id/back_bt"
@@ -101,7 +105,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/reading_switch"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -119,7 +123,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/back_bt"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/reading_switch"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
