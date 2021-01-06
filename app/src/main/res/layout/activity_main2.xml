@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main2Activity">
+    <GridView
+        android:id="@+id/gridview"
+        android:numColumns="2"
+        android:verticalSpacing="1dp"
+        android:background="#e5e5e5"
+        android:horizontalSpacing="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></GridView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="400dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_height="10dp"
+                android:layout_width="10dp"></TextView>
+
+            <Button
+                android:background="@color/ButtonBlueColor"
+                android:id="@+id/editProfile_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:layout_marginStart="10dp"
+                android:paddingLeft="30dp"
+                android:layout_marginEnd="10dp"
+                android:text="Back" />
+
+            <Button
+                android:background="@color/ButtonBlueColor"
+                android:id="@+id/notification_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Profile" />
+
+            <Button
+                android:background="@color/ButtonBlueColor"
+                android:id="@+id/logout_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:text="Home" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

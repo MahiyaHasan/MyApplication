@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Plant Lover&apos;s Assistant"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Notification1"></activity>
+        <activity android:name=".SetTimer" />
+        <activity android:name=".CheckWeather" />
+        <activity android:name=".Main1Activity" />
+        <activity android:name=".Tips" />
+        <activity android:name=".SetThresholds" />
+        <activity android:name=".RenamePlants" />
+        <activity android:name=".Settings" />
+        <activity android:name=".MoveSystem" />
+        <activity android:name=".ManuringSchedule" />
+        <activity android:name=".Watering" />
+        <activity android:name=".Report" />
+        <activity android:name=".Notification" />
+        <activity android:name=".EditProfile" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".LogOut" />
+        <activity android:name=".CheckPH" />
+        <activity android:name=".CheckTemperature" />
+        <activity android:name=".CheckLight" />
+        <activity android:name=".CheckMoisture" />
+        <activity android:name=".row_data" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".AlertReceiver" />
+    </application>
+
+</manifest>

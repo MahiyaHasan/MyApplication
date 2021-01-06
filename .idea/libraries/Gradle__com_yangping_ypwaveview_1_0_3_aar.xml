@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.yangping:ypwaveview:1.0.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c225a4bd62673f59706a1718ad1b847/ypwaveview-1.0.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c225a4bd62673f59706a1718ad1b847/ypwaveview-1.0.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c225a4bd62673f59706a1718ad1b847/ypwaveview-1.0.3/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yangping/ypwaveview/1.0.3/d8c6f93e89df2068eac6883e3c0142c1b1f5de6d/ypwaveview-1.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yangping/ypwaveview/1.0.3/8e2822081dae94734003fa773b6681c4c37ff027/ypwaveview-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
