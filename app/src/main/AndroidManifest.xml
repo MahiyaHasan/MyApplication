@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SetTimer"></activity>
+        <activity android:name=".Notification1"></activity>
+        <activity android:name=".SetTimer" />
         <activity android:name=".CheckWeather" />
         <activity android:name=".Main1Activity" />
         <activity android:name=".Tips" />
