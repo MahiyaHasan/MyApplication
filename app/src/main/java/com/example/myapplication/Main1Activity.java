@@ -4,10 +4,18 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.TextView;
+
+import java.util.Random;
 
 
 public class Main1Activity extends AppCompatActivity {
@@ -61,15 +69,7 @@ public class Main1Activity extends AppCompatActivity {
 
         });
 
-        notification_bt.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Notification.class);
-                startActivity(intent);
-            }
-
-        });
 
         logout_bt.setOnClickListener(new View.OnClickListener() {
 
@@ -81,4 +81,5 @@ public class Main1Activity extends AppCompatActivity {
 
         });
     }
-}
+
+    }

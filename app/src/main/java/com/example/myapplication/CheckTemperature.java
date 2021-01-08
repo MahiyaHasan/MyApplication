@@ -56,6 +56,7 @@ public class CheckTemperature extends AppCompatActivity {
     public static  String g = "temperature has increased";
 
     Button notify_bt;
+    Button  profile_bt;
     private Thermometer thermometer;
     private float a;
     private float progress_value;
@@ -66,6 +67,7 @@ public class CheckTemperature extends AppCompatActivity {
         setContentView(R.layout.activity_check_temperature);
         notificationManager = NotificationManagerCompat.from(this);
         notify_bt=findViewById(R.id.notify_bt);
+
         thermometer=findViewById(R.id.thermometer);
 
         df=FirebaseDatabase.getInstance().getReference().child("Temperature1");
@@ -81,7 +83,7 @@ public class CheckTemperature extends AppCompatActivity {
                     progress_value = Float.parseFloat(value);
                     showvalue(progress_value);
 
-                    if (progress_value > 32.00) {
+                    if (progress_value > 35.00||progress_value == 35.00) {
 
 
 
@@ -90,7 +92,7 @@ public class CheckTemperature extends AppCompatActivity {
 
 
                     }
-                    if (progress_value < 32.00||progress_value==32.00) {
+                    if (progress_value < 30.00||progress_value==30.00) {
 
 
 

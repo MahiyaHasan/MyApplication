@@ -79,6 +79,7 @@
                 android:src="@drawable/ic_arrow_back_black_24dp"></ImageButton>
 
             <ImageButton
+                android:id="@+id/profile_bt"
                 android:layout_width="100dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
