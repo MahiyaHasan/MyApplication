@@ -39,7 +39,7 @@ public class Thermometer extends View {
     private static final int GRADUATION_TEXT_SIZE = 16; // in sp
     private static float DEGREE_WIDTH = 30;
     private static final int NB_GRADUATIONS = 8;
-    public static final float MAX_TEMP = 50, MIN_TEMP = -30;
+    public static final float MAX_TEMP = 65, MIN_TEMP = -30;
     private static final float RANGE_TEMP = 80;
     private static final int NB_GRADUATIONS_F = 8;
     private static final float MAX_TEMP_F = 120, MIN_TEMP_F = -30;

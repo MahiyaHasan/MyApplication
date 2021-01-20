@@ -51,7 +51,7 @@ public class Main2Activity extends AppCompatActivity {
                 }
                 if(i == 3)
                 {
-                    Intent homepageIntent = new Intent(getApplicationContext(), CheckPH.class);
+                    Intent homepageIntent = new Intent(Main2Activity.this,Profile.class);
                     startActivity(homepageIntent);
                 }
                 if(i == 4)

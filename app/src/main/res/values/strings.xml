@@ -11,4 +11,6 @@
     <string name="back">Back</string>
     <string name="profile">Profile</string>
     <string name="home">Home</string>
+    <string name="camera_bt">SetThreshold</string>
+    <string name="gallery_bt">GALLERY</string>
 </resources>

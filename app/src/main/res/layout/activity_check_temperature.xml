@@ -10,7 +10,7 @@
     <com.example.myapplication.Thermometer
         android:id="@+id/thermometer"
         android:layout_width="match_parent"
-        android:layout_height="490dp"
+        android:layout_height="544dp"
         android:layout_marginBottom="40dp"
         app:innerColor="@color/holo_blue_bright"
         app:middleColor="@color/app_color_2"

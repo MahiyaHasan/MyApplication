@@ -21,7 +21,7 @@ import java.util.Random;
 public class Main1Activity extends AppCompatActivity {
 
     ListView simpleList;
-    Button settings_bt,editProfile_bt,profile_bt,notification_bt,logout_bt;
+   private Button settings_bt,editProfile_bt,profile_bt,notification_bt,logout_bt;
 
     int flags[]={R.drawable.plant1, R.drawable.plant1, R.drawable.plant1, R.drawable.plant1,R.drawable.plant1,R.drawable.plant1};
     int arrows[]={R.drawable.ic_arrow_forward_black_24dp, R.drawable.ic_arrow_forward_black_24dp, R.drawable.ic_arrow_forward_black_24dp, R.drawable.ic_arrow_forward_black_24dp,R.drawable.ic_arrow_forward_black_24dp,R.drawable.ic_arrow_forward_black_24dp};
@@ -58,7 +58,15 @@ public class Main1Activity extends AppCompatActivity {
             }
 
         });
+       profile_bt.setOnClickListener(new View.OnClickListener() {
 
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),Profile.class);
+                startActivity(intent);
+            }
+
+        });
         editProfile_bt.setOnClickListener(new View.OnClickListener() {
 
             @Override
