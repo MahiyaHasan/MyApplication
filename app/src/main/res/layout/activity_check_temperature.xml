@@ -32,37 +32,7 @@
             android:background="@color/colorPrimaryDark"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/edit_bt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
 
-
-                android:layout_marginEnd="10dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="10dp"
-                android:text="@string/edit_bt" />
-
-            <Button
-                android:id="@+id/notify_bt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-
-                android:layout_marginEnd="10dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="10dp"
-                android:text="@string/notify_bt" />
-
-            <Button
-                android:id="@+id/logout_bt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="10dp"
-                android:paddingStart="0dp"
-                android:paddingEnd="10dp"
-                android:text="@string/logout_bt" />
         </LinearLayout>
 
         <LinearLayout

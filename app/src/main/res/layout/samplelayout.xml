@@ -11,12 +11,12 @@
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
-        android:layout_height="82dp"
+        android:layout_height="42dp"
+        android:background="@color/holo_blue_bright"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:background="@color/holo_blue_bright"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="123dp"
 
@@ -25,12 +25,12 @@
     <TextView
         android:id="@+id/textView9"
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="50dp"
+        android:background="@color/holo_blue_bright"
         android:gravity="center"
         android:textColor="#000000"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:background="@color/holo_blue_bright"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="164dp"
 
@@ -39,12 +39,12 @@
     <TextView
         android:id="@+id/textView10"
         android:layout_width="match_parent"
-        android:layout_height="74dp"
+        android:layout_height="wrap_content"
+        android:background="@color/holo_blue_bright"
         android:gravity="center"
         android:textColor="#000000"
-        android:textStyle="bold"
         android:textSize="18sp"
-        android:background="@color/holo_blue_bright"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="184dp"
         tools:layout_editor_absoluteY="197dp" />
 

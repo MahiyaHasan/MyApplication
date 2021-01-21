@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class Main2Activity extends AppCompatActivity {
     GridView gridView;
     String[] fruitNames = {"Apple","Orange","strawberry","Melon","Kiwi","Banana"};
-    int[] fruitImages = {R.drawable.moisture,R.drawable.light,R.drawable.temperature,R.drawable.ph,R.drawable.weather,R.drawable.blank};
+    int[] fruitImages = {R.drawable.moisture,R.drawable.light,R.drawable.temperature,R.drawable.plant3,R.drawable.weather,R.drawable.blank};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

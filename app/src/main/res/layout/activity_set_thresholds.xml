@@ -89,7 +89,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="166dp"
         android:layout_marginBottom="360dp"
-        android:text="Moisture"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +104,7 @@
         android:layout_marginTop="149dp"
         android:layout_marginEnd="305dp"
         android:layout_marginBottom="294dp"
-        android:text="plant 1"
+        android:text="moisture"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,59 +126,31 @@
         app:layout_constraintStart_toEndOf="@+id/textView20"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="51dp"
-        android:layout_marginEnd="301dp"
-        android:layout_marginBottom="213dp"
-        android:text="plant 2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
-    <EditText
-        android:id="@+id/moisture2_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="216dp"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/moisture1_et" />
 
     <Button
         android:id="@+id/setThresholds_bt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="119dp"
         android:layout_marginBottom="131dp"
         android:background="@color/ButtonLightBlueColor"
-        android:text="  Set Thresholds  "
+        android:text="Set Thresholds"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/moisture2_et"
+        app:layout_constraintTop_toBottomOf="@+id/moisture1_et"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/setThresholds_bt2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="56dp"
         android:layout_marginBottom="131dp"
         android:background="@color/ButtonLightBlueColor"
@@ -187,7 +159,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/setThresholds_bt"
-        app:layout_constraintTop_toBottomOf="@+id/moisture2_et"
+        app:layout_constraintTop_toBottomOf="@+id/textView20"
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
@@ -204,7 +176,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
     <Button
         android:id="@+id/profile_bt"
@@ -236,5 +208,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/profile_bt"
-        app:layout_constraintTop_toBottomOf="@+id/moisture2_et" />
+        app:layout_constraintTop_toBottomOf="@+id/moisture1_et" />
 </androidx.constraintlayout.widget.ConstraintLayout>

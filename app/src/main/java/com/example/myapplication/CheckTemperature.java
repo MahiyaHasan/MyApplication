@@ -66,7 +66,7 @@ public class CheckTemperature extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_check_temperature);
         notificationManager = NotificationManagerCompat.from(this);
-        notify_bt=findViewById(R.id.notify_bt);
+
 
         thermometer=findViewById(R.id.thermometer);
 
